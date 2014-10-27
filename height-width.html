@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Window height & width</title>
+</head>
+<style>
+	div {
+		border: 1px solid #F00;
+		background: #0F0;
+		min-height: 100px;
+	}
+</style>
+
+
+<body>
+<div>
+	
+
+
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    getWidthAndHeight();
+});
+
+$(window).resize(function() {
+    getWidthAndHeight();
+});
+
+function getWidthAndHeight() {
+    var winWidth = $(window).width();
+    var winHeight = $(window).height();
+    $("div").css({
+        width: winWidth,
+        height: winHeight
+    });
+}
+</script>
+
+</body>
+</html>
